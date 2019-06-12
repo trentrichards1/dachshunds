@@ -1,0 +1,208 @@
+@charset "utf-8";
+
+/*
+Author: Trenton Richards
+Date: 6/11/19
+*/
+
+/*body*/
+
+html {
+  padding-left: 3em;
+  padding-right: 3em;
+  background-image: url(bg.jpg);
+}
+
+body {
+  color: black;
+  font-family: verdana,monospace;
+  font-size: .8em;
+  background-color: #f4f4f4;
+  padding-left: 3em;
+  padding-right: 3em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.headers {
+  font-size: 1.5em;
+  clear: left;
+  font-weight: bold;
+}
+
+h7 {
+  text-align: center;
+}
+
+video, audio, iframe {
+  margin-top: 1em;
+}
+
+/*nav*/
+nav {
+  clear: both;
+  text-align: center;
+  margin-bottom: 4em;
+}
+
+nav li {
+  display: inline-block;
+  width: 12%;
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+}
+
+
+/*images*/
+.centered {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  margin-top: 1em;
+}
+
+.historyimage {
+  display: block;
+  float: right;
+  width: 30%;
+  margin: 1em;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+
+/*M8LO10 Demonstrate a CSS animation or transition. Rotate on hover*/
+.bigboy {
+  display: block;
+  float: left;
+  width: 30%;
+  margin: 1em;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  animation-play-state: paused;
+}
+
+.bigboy:hover {
+  -webkit-animation: spinner 10s linear infinite;
+  animation: spin 10s linear infinite;
+	animation-play-state: running;
+}
+
+@keyframes spin {
+    from {
+      transform:rotate(360deg);
+    }
+    to {
+      transform:rotate(0deg);
+    }
+}
+
+/*mobile/desktop*/
+@media screen and (min-width: 800px) {
+  .flexboxtest {
+      display: -webkit-flex;
+      display: flex;
+      flex-direction: row;
+    }
+
+  .navicon {
+    display: none;
+  }
+
+}
+
+.content {
+    -webkit-flex: 1;
+    flex: 1;
+    padding: 1em;
+}
+
+.sidebar {
+    -webkit-flex: 0 1 400px;
+    flex: 0 1 400px;
+    padding: 1em;
+}
+
+
+/*survey
+M7LO11 Demonstrate how to format a form with CSS - Just adds some margins and spacing, aligns fields center*/
+#loadedQuestion, fieldset div, textarea {
+  border: none;
+  margin-top: 1em;
+  text-align: center;
+}
+
+#no {
+  margin-right: 2em;
+}
+
+#buttonQuestion, #surveyTitle {
+  font-size: 2em;
+  text-align: center;
+}
+
+
+/* Not working (in Safari at least)
+#subButton:hover {
+  background: transparent;
+  color: blue;
+}
+*/
+
+/*media query*/
+@media screen and (max-width: 799px) {
+  ul {
+    display: none;
+    width: 1%;
+    padding: 9%;
+    text-align: left;
+    background-color: white;
+  }
+
+  nav li {
+    display: inline;
+    text-align: left;
+  }
+
+  .navicon {
+      display: block;
+      width: 4em;
+      position: fixed;
+      top: 0;
+      left: 0;
+  }
+
+  #navicon:hover+ul, ul:hover{
+		display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+/*tables*/
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  text-align: center;
+  font-size: 1.1em;
+}
+
+th {
+  font-size: 1.5em;
+  font-weight: bold;
+  background-color: blue;
+  color: white;
+}
+
+.tableImage {
+  width: 90%;
+}
+
+.spanTwo {
+  width: 30%;
+}
+
+table tbody {
+  background-color: lightgray;
+}
